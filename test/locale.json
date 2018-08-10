@@ -1,0 +1,30 @@
+{
+	"zh-tw": {
+		"name": "寫詩羊",
+		"book": "書",
+		"cat": "貓咪",
+		"onlyTWAttr": "只有繁中才有的屬性",
+		"TW-EN": "先存取zh-tw後存取en",
+		"TW-CN": "先存取zh-tw後存取zh-cn",
+		"school": {
+			"name": "雲林科技大學",
+			"department": "資訊管理系"
+		}
+	},
+	"zh-cn": {
+		"name": "写诗羊",
+		"book": "书",
+		"cat": "猫咪",
+		"onlyCNAttr": "只有简中才有的属性",
+		"TW-CN": "先存取zh-cn后存取zh-tw",
+		"CN-EN": "先存取zh-cn后存取en"
+	},
+	"en": {
+		"name": "sexyoung",
+		"book": "book",
+		"cat": "cat",
+		"onlyENAttr": "only for EN",
+		"TW-EN": "first access tw, second access en",
+		"CN-EN": "first access en, second access cn"
+	}
+}

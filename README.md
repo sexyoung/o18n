@@ -1,2 +1,2 @@
-# c18n
-Componentization your i18n file
+# o18n
+organize your i18n file
