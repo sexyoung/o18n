@@ -1,0 +1,7 @@
+**/node_modules/
+**/spec/
+**/test/
+**/tests/
+**/vendor/
+**/*.d.ts
+**/cypress/
