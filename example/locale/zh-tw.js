@@ -5,4 +5,7 @@ export default {
   'onlyTWAttr': '只有繁中才有的屬性',
   'TW-EN': '先存取zh-tw後存取en',
   'TW-CN': '先存取zh-tw後存取zh-cn',
+  'tree': {
+    'name': '繁中才有的名字'
+  }
 };

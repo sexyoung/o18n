@@ -4,7 +4,7 @@ const set           = Symbol('set');
 const reset         = Symbol('reset');
 const locale        = Symbol('locale');
 const organize      = Symbol('organize');
-const localeList     = Symbol('localeList');
+const localeList    = Symbol('localeList');
 const mappingLocale = Symbol('mappingLocale');
 
 const ERROR = {
@@ -23,10 +23,24 @@ class O18N {
   [organize](localeObj, result = {}) {
     Object.keys(localeObj).forEach((key) => {
       // check is keys exist?
-      if (!result[key]) {
-        result[key] = typeof localeObj[key] !== 'object'
-          ? localeObj[key] : this[organize](localeObj[key]);
+      // 1. if the key is exist, check the value type, if it is object, don't need set anything, and set initialResult equal {}
+      // 2. if localeObj's key isn't object, give localeObj's key, else call itself base on localeObj's key
+      let initialResult = {};
+      if (result[key]) {
+        if (typeof result[key] !== 'object') return;
+        initialResult = result[key];
       }
+      result[key] = typeof localeObj[key] !== 'object'
+        ? localeObj[key] : this[organize](localeObj[key], initialResult);
+
+      // if (!result[key]) {
+      // result[key] = typeof localeObj[key] !== 'object'
+      // ? localeObj[key] : this[organize](localeObj[key]);
+      // } else {
+      // result[key]  = typeof result[key] !== 'object'
+      // ? result[key] : typeof localeObj[key] !== 'object'
+      // ? localeObj[key] : this[organize](localeObj[key], result[key]);
+      // }
     });
     return result;
   }
@@ -77,7 +91,7 @@ class O18N {
   }
 
   // set new locale, maybe replace some key/value
-  set(_locale, defaultLocale = '') {
+  add(_locale, defaultLocale = '') {
     this[localeList] = merge.all([
       this[localeList],
       _locale,
