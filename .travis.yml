@@ -12,4 +12,9 @@ cache:
     - ".eslintcache"
     - "node_modules"
 script:
-    - yarn run test
+  - yarn run test
+branches:
+  only:
+    - master
+    - develop
+
