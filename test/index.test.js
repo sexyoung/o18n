@@ -1,6 +1,9 @@
 import O18N from '../src';
 import locale from './locale.json';
 import appendLocale from './append.locale.json';
+import appendTW from './append.locale.tw.json';
+import appendCN from './append.locale.cn.json';
+import appendEN from './append.locale.en.json';
 
 let lang;
 
@@ -9,12 +12,12 @@ beforeAll(() => {
 });
 
 test('no give parameter to constructor', () => {
-  lang.set({});
+  lang.add({});
   expect(Object.keys(lang).length).toBe(0);
 });
 
 test('load locale file, default locale is first in Object', () => {
-  lang.set(locale);
+  lang.add(locale);
   expect(lang.name).toBe('寫詩羊');
   expect(lang.book).toBe('書');
   expect(lang.cat).toBe('貓咪');
@@ -71,7 +74,54 @@ test('some attribute is stable, whatever you choose any locale', () => {
 });
 
 test('append another locale file', () => {
-  lang.set(appendLocale, 'zh-tw'); // ← you can give locale to change.
+  lang.add(appendLocale, 'zh-tw'); // ← you can append a locale file to change.
   expect(lang.name).toBe('血絲養');
   expect(lang.appendAttr).toBe('血絲養的貓');
+});
+
+describe('append tree locale files', () => {
+  beforeAll(() => {
+    lang.add(appendTW);
+    lang.add(appendCN);
+    lang.add(appendEN);
+  });
+
+  test('try locale zh-tw tree content', () => {
+    lang.locale = 'zh-tw';
+    expect(lang.tree).toEqual({
+      name: '繁中才有的名字',
+      subTree: {
+        name: '简体中文才出现',
+        subSubTree: {
+          name: 'sub sub Tree'
+        }
+      }
+    });
+  });
+
+  test('try locale en tree content', () => {
+    lang.locale = 'en';
+    expect(lang.tree).toEqual({
+      name: 'en name',
+      subTree: {
+        name: 'sub Tree',
+        subSubTree: {
+          name: 'sub sub Tree'
+        }
+      }
+    });
+  });
+
+  test('try locale zh-cn tree content', () => {
+    lang.locale = 'zh-cn';
+    expect(lang.tree).toEqual({
+      name: '繁中才有的名字',
+      subTree: {
+        name: '简体中文才出现',
+        subSubTree: {
+          name: 'sub sub Tree'
+        }
+      }
+    });
+  });
 });

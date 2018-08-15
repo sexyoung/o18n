@@ -2,7 +2,7 @@ import O18N from '../src';
 import locale from './locale';
 
 const lang = new O18N();
-lang.set(locale);
+lang.add(locale);
 
 const id = _id => document.getElementById(_id);
 
