@@ -1,0 +1,12 @@
+version: "2"
+languages:
+  JavaScript: true
+  exclude_paths:
+    - "node_modules/**/*"
+    - "spec/**/*"
+    - "test/**/*"
+    - "tests/**/*"
+    - "vendor/**/*"
+    - "**/*.d.ts"
+    - "cypress/**/*"
+    - "**/*.spec.js"
