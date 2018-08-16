@@ -4,30 +4,29 @@ function shouldStatic() {
   cy.get('#onlyENAttr').should('contain', 'only for EN');
 }
 
+const expectValue = [
+  {
+    locale: 'cn', name: '写诗羊', book: '书', cat: '猫咪'
+  },
+  {
+    locale: 'tw', name: '寫詩羊', book: '書', cat: '貓咪'
+  },
+  {
+    locale: 'en', name: 'sexyoung', book: 'book', cat: 'cat'
+  },
+];
+
 describe('demo o18n', () => {
-  it('basic work', () => {
+  before(() => {
     cy.visit('http://localhost:8080');
-    cy.contains('zh-cn').click();
-    cy.get('#locale').should('contain', 'cn');
-    cy.get('#name').should('contain', '写诗羊');
-    cy.get('#book').should('contain', '书');
-    cy.get('#cat').should('contain', '猫咪');
-    shouldStatic();
   });
-  it('click zh-tw', () => {
-    cy.contains('zh-tw').click();
-    cy.get('#locale').should('contain', 'tw');
-    cy.get('#name').should('contain', '寫詩羊');
-    cy.get('#book').should('contain', '書');
-    cy.get('#cat').should('contain', '貓咪');
-    shouldStatic();
-  });
-  it('click en', () => {
-    cy.contains('en').click();
-    cy.get('#locale').should('contain', 'en');
-    cy.get('#name').should('contain', 'sexyoung');
-    cy.get('#book').should('contain', 'book');
-    cy.get('#cat').should('contain', 'cat');
-    shouldStatic();
+  expectValue.forEach((lang) => {
+    it(`click ${lang.locale}`, () => {
+      cy.contains(lang.locale).click();
+      cy.get('#locale').should('contain', lang.locale);
+      cy.get('#name').should('contain', lang.name);
+      cy.get('#book').should('contain', lang.book);
+      cy.get('#cat').should('contain', lang.cat);
+    });
   });
 });
