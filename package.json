@@ -6,6 +6,7 @@
   "scripts": {
     "start": "WEBPACK_ENV=dev webpack-dev-server --config webpack.config.dev.babel.js --progress --colors --watch",
     "test": "jest",
+    "coveralls": "jest",
     "coverage": "npm test -- --coverage",
     "test:watch": "npm test -- --watchAll",
     "coverage:watch": "npm test -- --coverage --watchAll",
