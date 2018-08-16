@@ -10,7 +10,8 @@
     "coverage": "npm test -- --coverage",
     "test:watch": "npm test -- --watchAll",
     "coverage:watch": "npm test -- --coverage --watchAll",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "codecov": "codecov -f coverage/coverage-final.json"
   },
   "keywords": [
     "i18n",
