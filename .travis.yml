@@ -13,6 +13,8 @@ cache:
     - "node_modules"
 script:
   - yarn run coverage
+  - sh ./generate-coverall.sh
+  - yarn run coveralls
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f coverage/coverage-final.json
 branches:
