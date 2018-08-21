@@ -1,8 +1,14 @@
 {
   "name": "o18n",
-  "version": "1.0.0",
-  "description": "Componentization your i18n file",
+  "version": "0.1.0",
+  "description": "A plugin for organize your internationalization files.",
+	"keywords": [
+		"i18n",
+		"internationalization"
+	],
   "main": "dist/index.js",
+	"repository": "https://github.com/sexyoung/o18n.git",
+	"bugs": "https://github.com/sexyoung/o18n/issues",
   "scripts": {
     "start": "WEBPACK_ENV=dev webpack-dev-server --config webpack.config.dev.babel.js --progress --colors --watch",
     "test": "jest",
@@ -15,13 +21,8 @@
     "codecov": "codecov -f coverage/coverage-final.json",
     "build": "webpack --config webpack.config.prod.babel.js"
   },
-  "keywords": [
-    "i18n",
-    "Componentization",
-    "localize"
-  ],
-  "author": "sexyoung",
-  "license": "ISC",
+  "author": "sexyoung <Habuche@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
