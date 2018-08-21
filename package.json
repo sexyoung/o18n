@@ -6,13 +6,14 @@
   "scripts": {
     "start": "WEBPACK_ENV=dev webpack-dev-server --config webpack.config.dev.babel.js --progress --colors --watch",
     "test": "jest",
-    "coveralls": "jest",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "coverage": "npm test -- --coverage",
-		"coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:watch": "npm test -- --watchAll",
     "coverage:watch": "npm test -- --coverage --watchAll",
+    "cypress": "cypress",
     "cypress:open": "cypress open",
-    "codecov": "codecov -f coverage/coverage-final.json"
+    "codecov": "codecov -f coverage/coverage-final.json",
+    "build": "webpack --config webpack.config.prod.babel.js"
   },
   "keywords": [
     "i18n",
@@ -32,7 +33,7 @@
     "chai": "^4.1.2",
     "codecov": "^3.0.4",
     "coveralls": "^3.0.2",
-    "cypress": "^3.0.3",
+    "cypress": "^3.1.0",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",

@@ -7,7 +7,7 @@ export default {
   ...config,
   mode: 'production',
   entry: `${__dirname}/src/index.js`,
-  devtool: 'nosources-source-map',
+  devtool: 'cheap-module-source-map',
   output: {
     path: `${__dirname}/dist`,
     filename: outputFile,

@@ -66,4 +66,6 @@ typings/
 /cypress/plugins
 /cypress/integration/examples
 /cypress/fixtures
+/cypress/videos
+/cypress/screenshots
 cypress.json
