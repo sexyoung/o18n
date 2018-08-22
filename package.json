@@ -1,12 +1,12 @@
 {
   "name": "o18n",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A plugin for organize your internationalization files.",
   "keywords": [
     "i18n",
     "internationalization"
   ],
-  "main": "dist/index.js",
+  "main": "dist/o18n.js",
   "homepage": "https://github.com/sexyoung/o18n/",
   "repository": "https://github.com/sexyoung/o18n.git",
   "bugs": "https://github.com/sexyoung/o18n/issues",
