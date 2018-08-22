@@ -1,5 +1,3 @@
-import merge from 'deepmerge';
-
 const set           = Symbol('set');
 const reset         = Symbol('reset');
 const locale        = Symbol('locale');
@@ -20,18 +18,18 @@ class O18N {
   }
 
   // organize mappingLocale!
-  [organize](localeObj, result = {}) {
+  [organize](localeObj, result = {}, force = false) {
     Object.keys(localeObj).forEach((key) => {
       // check is keys exist?
       // 1. if the key is exist, check the value type, if it is object, don't need set anything, and set initialResult equal {}
       // 2. if localeObj's key isn't object, give localeObj's key, else call itself base on localeObj's key
       let initialResult = {};
       if (result[key]) {
-        if (typeof result[key] !== 'object') return;
+        if (typeof result[key] !== 'object' && !force) return;
         initialResult = result[key];
       }
       result[key] = typeof localeObj[key] !== 'object'
-        ? localeObj[key] : this[organize](localeObj[key], initialResult);
+        ? localeObj[key] : this[organize](localeObj[key], initialResult, force);
 
       // if (!result[key]) {
       // result[key] = typeof localeObj[key] !== 'object'
@@ -92,10 +90,11 @@ class O18N {
 
   // set new locale, maybe replace some key/value
   add(_locale, defaultLocale = '') {
-    this[localeList] = merge.all([
-      this[localeList],
+    this[localeList] = this[organize](
       _locale,
-    ]);
+      this[localeList],
+      true,
+    );
     const mainLocale = defaultLocale || this.locale || Object.keys(this[localeList])[0] || '';
     this.locale = mainLocale;
   }

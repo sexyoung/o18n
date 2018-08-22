@@ -2,13 +2,13 @@
   "name": "o18n",
   "version": "0.1.0",
   "description": "A plugin for organize your internationalization files.",
-	"keywords": [
-		"i18n",
-		"internationalization"
-	],
+  "keywords": [
+    "i18n",
+    "internationalization"
+  ],
   "main": "dist/index.js",
-	"repository": "https://github.com/sexyoung/o18n.git",
-	"bugs": "https://github.com/sexyoung/o18n/issues",
+  "repository": "https://github.com/sexyoung/o18n.git",
+  "bugs": "https://github.com/sexyoung/o18n/issues",
   "scripts": {
     "start": "WEBPACK_ENV=dev webpack-dev-server --config webpack.config.dev.babel.js --progress --colors --watch",
     "test": "jest",
@@ -48,9 +48,6 @@
     "webpack": "^4.16.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
-  },
-  "dependencies": {
-    "deepmerge": "^2.1.1"
   },
   "jest": {
     "testEnvironment": "node",
