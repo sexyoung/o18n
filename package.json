@@ -7,6 +7,7 @@
     "internationalization"
   ],
   "main": "dist/index.js",
+  "homepage": "https://github.com/sexyoung/o18n/",
   "repository": "https://github.com/sexyoung/o18n.git",
   "bugs": "https://github.com/sexyoung/o18n/issues",
   "scripts": {
