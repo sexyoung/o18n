@@ -56,7 +56,7 @@
       "src/*.js"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>[/\\\\](build|cypress|node_modules)[/\\\\]"
+      "<rootDir>[/\\\\](build|cypress|node_modules|website)[/\\\\]"
     ]
   },
   "config": {
