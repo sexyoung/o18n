@@ -1,0 +1,10 @@
+{
+  "description": "用新的方式組織你的i18n檔案。",
+  "startBlock": {
+    "title": "新手入門",
+    "examples": "範例",
+    "basic": "基本範例",
+    "order": "使用第二順位語言檔代替缺少的鍵",
+    "split": "切割i18n檔在不同的元件之間"
+  }
+}

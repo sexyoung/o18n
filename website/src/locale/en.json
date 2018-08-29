@@ -1,0 +1,10 @@
+{
+  "description": "organizing i18n files new way.",
+  "startBlock": {
+    "title":"Getting Started",
+    "examples": "Examples",
+    "basic": "Example with create-react-app",
+    "order": "Example order of display for different languages",
+    "split": "Example Use o18n between different components"
+  }
+}
