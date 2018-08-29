@@ -1,5 +1,5 @@
 # o18n
-[![npm version](https://badge.fury.io/js/o18n.svg)](https://badge.fury.io/js/o18n) [![Coverage Status](https://coveralls.io/repos/github/sexyoung/o18n/badge.svg?branch=master)](https://coveralls.io/github/sexyoung/o18n?branch=master) [![Build Status](https://travis-ci.org/sexyoung/o18n.svg?branch=master)](https://travis-ci.org/sexyoung/o18n) [![codecov](https://codecov.io/gh/sexyoung/o18n/branch/master/graph/badge.svg)](https://codecov.io/gh/sexyoung/o18n) [![Maintainability](https://api.codeclimate.com/v1/badges/74fbd29f1eaf55c971c1/maintainability)](https://codeclimate.com/github/sexyoung/o18n/maintainability) [![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=sexyoung/o18n)](http://clayallsopp.github.io/readme-score?url=sexyoung/o18n) [![Package Quality](http://npm.packagequality.com/badge/o18n.png)](http://packagequality.com/#?package=o18n)
+[![npm version](https://badge.fury.io/js/o18n.svg)](https://badge.fury.io/js/o18n) [![Coverage Status](https://coveralls.io/repos/github/sexyoung/o18n/badge.svg?branch=master)](https://coveralls.io/github/sexyoung/o18n?branch=master) [![Build Status](https://travis-ci.org/sexyoung/o18n.svg?branch=master)](https://travis-ci.org/sexyoung/o18n) [![codecov](https://codecov.io/gh/sexyoung/o18n/branch/master/graph/badge.svg)](https://codecov.io/gh/sexyoung/o18n) [![Maintainability](https://api.codeclimate.com/v1/badges/74fbd29f1eaf55c971c1/maintainability)](https://codeclimate.com/github/sexyoung/o18n/maintainability) [![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=sexyoung/o18n)](http://clayallsopp.github.io/readme-score?url=sexyoung/o18n) [![Package Quality](http://npm.packagequality.com/shield/o18n.svg)](http://packagequality.com/#?package=o18n) [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat-square)](https://cypress.io)
 
 **o18n** 是一個能幫你組織化語言檔的套件. 能決定語系的顯示順序，還能切割語系檔到各個元件中，以避免語言包非常大一坨。 **因為分每個元件可能會有自己的語系檔，所以就算重複Key值，也沒有關係。**
 
@@ -45,21 +45,11 @@ yarn add o18n
 ```
 
 ### 範例
-- [Example with create-react-app](https://)
-- [Example order of display for different languages](https://)
-- [Example Use o18n between different components](https://)
+- [Example with create-react-app](https://github.com/sexyoung/o18n/tree/master/example/basic)
+- [Example order of display for different languages](https://github.com/sexyoung/o18n/tree/master/example/order)
+- [Example Use o18n between different components](https://github.com/sexyoung/o18n/tree/master/example/split)
 
 馬上看 [線上示範](https://sexyoung.github.io/o18n)
-
-![Alt text](https://media.giphy.com/media/kweov0pPcBSOa14fsG/giphy.gif)
-
-## 跑測試
-
-Explain how to run the automated tests for this system
-
-```
-Give an example
-```
 
 ## 作者
 - sexyoung
