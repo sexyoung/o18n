@@ -4,7 +4,10 @@
   "private": false,
   "homepage": "https://sexyoung.github.io/o18n",
   "dependencies": {
+    "babel-plugin-add-react-displayname": "^0.0.5",
     "bootstrap-sass-grid": "^4.0.1",
+    "logrocket": "^0.6.16",
+    "logrocket-react": "^2.0.0",
     "normalize.scss": "^0.1.0",
     "o18n": "^0.1.1",
     "react": "^16.4.2",
